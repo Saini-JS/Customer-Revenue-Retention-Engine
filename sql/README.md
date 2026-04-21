@@ -9,7 +9,7 @@ Scripts are ordered to reflect the logical flow of the analysis.
 
 ---
 
-## 1. `01_schema_setup.sql`  
+## `01_schema_setup.sql`  
 Creates the core dimensional and fact tables:
 
 - `Dim_Products`
@@ -22,7 +22,7 @@ This is the foundation for all downstream views.
 
 ---
 
-## 2. `02_customer_insights_view.sql` — Customer Insights (RFM + Behaviour)  
+## `02_customer_insights_view.sql` — Customer Insights (RFM + Behaviour)  
 Builds the main customer‑level analytical view:
 
 - Recency, Frequency, Monetary (RFM)
@@ -36,7 +36,7 @@ This is the primary customer profile view used across the project.
 
 ---
 
-## 3. `03_revenue_leakage_view.sql` — Revenue Leakage Analysis  
+## `03_revenue_leakage_view.sql` — Revenue Leakage Analysis  
 Analyses support tickets to quantify:
 
 - Revenue at risk  
@@ -49,7 +49,7 @@ This view identifies where the business is losing money due to service issues.
 
 ---
 
-## 4. `04_market_basket_view.sql` — Market Basket Analysis (MBA)  
+## `04_market_basket_view.sql` — Market Basket Analysis (MBA)  
 Generates product‑pair insights:
 
 - Support  
@@ -61,7 +61,7 @@ This view helps identify cross‑sell opportunities and profitable product assoc
 
 ---
 
-## 5. `05_time_intelligence_view.sql` — Time Intelligence Metrics  
+## `05_time_intelligence_view.sql` — Time Intelligence Metrics  
 Daily‑level metrics for KPI dashboards:
 
 - Daily revenue  
@@ -71,7 +71,7 @@ Used for trendlines, period comparisons, and executive KPI visuals.
 
 ---
 
-## 6. `06_retention_action_base_view.sql` — Retention Action Base  
+## `06_retention_action_base_view.sql` — Retention Action Base  
 Final consolidated view combining:
 
 - Customer insights  
