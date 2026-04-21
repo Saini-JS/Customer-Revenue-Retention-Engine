@@ -9,7 +9,8 @@ from datetime import datetime, timedelta
 # =============================================================
 
 # --- 1. CONNECTION ---
-server = r'JAS-2025\SQLEXPRESS'
+server = r'server = r'LOCAL_SQL_SERVER'
+'
 database = 'Wine_Analytics_UK'
 conn = pyodbc.connect(
     f'DRIVER={{ODBC Driver 17 for SQL Server}};'
