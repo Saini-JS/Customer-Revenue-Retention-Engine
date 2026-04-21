@@ -1,10 +1,14 @@
-/* ============================================================
-   QUERY: RFM MODEL (Recency, Frequency, Monetary) incl other customer info
-   ------------------------------------------------------------
-   Recency   = How recently the customer ordered
-   Frequency = How often they order
-   Monetary  = How much they spend
-   ============================================================ */
+/* 
+   Customer Insights View (RFM + Behavioural Metrics)
+   --------------------------------------------------
+   Produces customer-level metrics including:
+   - Recency, Frequency, Monetary (RFM)
+   - Net profit allocation
+   - CSAT and ticket behaviour
+   - Customer status (Active / At-Risk / Churned)
+   - Revenue and profit buckets
+*/
+
 
 CREATE OR ALTER VIEW dbo.vw_CustomerInsights AS 
 WITH MaxDate AS (
@@ -51,8 +55,7 @@ Customer_Aggregation AS (
         ) AS Recency,
         COUNT(DISTINCT r.OrderID) AS Frequency_Count,
         -- Note: Avg_Cadence_Days will naturally be NULL for one-time buyers. 
-        -- This is statistically accurate and should be handled dynamically in Tableau.
-        AVG(r.DaysToNextOrder) AS Avg_Cadence_Days,
+               AVG(r.DaysToNextOrder) AS Avg_Cadence_Days,
         SUM(r.TotalRevenue) AS Total_Revenue,
         SUM(r.NetProfit) AS Total_Net_Profit,
         MAX(cs.AvgCSATScore) AS Avg_CSAT_Score,
