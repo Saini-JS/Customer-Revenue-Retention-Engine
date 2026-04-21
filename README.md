@@ -1,5 +1,5 @@
 # The Customer Revenue & Retention Engine
-## End-to-End Data Analytics Project | SQL Server · Python · Tableau
+## SQL Server · Python · Tableau
 
 An end-to-end analytics portfolio project showing how a UK wine retailer can identify profit leakage, prioritise customer retention, and recover growth using SQL, Python, and Tableau.
 
