@@ -118,7 +118,8 @@ Additional semantic layers were created using SQL views, including:
 
 The project is built on a relational SQL Server structure, with Tableau connected primarily to curated analytical views rather than raw fact tables.
 
-![End-to-End Data Flow](assets/End-to-End Data Flow.png)
+![End-to-End Data Flow](assets/End-to-End-Data-Flow.png)
+
 ---
 
 ## Workflow
