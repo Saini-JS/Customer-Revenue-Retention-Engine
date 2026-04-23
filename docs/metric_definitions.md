@@ -10,11 +10,11 @@ Revenue remaining after subtracting product cost and allocated shipping cost.
 ### Net Margin %
 Net Profit divided by Revenue.
 
-### Revenue At Risk
-Revenue linked to customers with complaint activity who have not yet churned.
+### Complaint-Linked Revenue At Risk
+Revenue associated with complaint-affected customers who are not yet classified as churned.
 
-### Revenue Lost
-Revenue linked to customers with complaint activity who are already classified as churned.
+### Complaint-Linked Revenue Lost
+Revenue associated with complaint-affected customers who are classified as churned.
 
 ---
 
