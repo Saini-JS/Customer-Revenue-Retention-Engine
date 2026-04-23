@@ -75,6 +75,9 @@ Bucketed AS (
             WHEN CA.Recency BETWEEN 61 AND 180 THEN 'At-Risk'
             ELSE 'Churned'
         END AS Customer_Status,
+         -- Customer_Status is a recency-based lifecycle classification:
+        -- Active / At-Risk / Churned
+        -- It is used later as an input into complaint-linked revenue exposure logic.
         NTILE(4) OVER (ORDER BY CA.Total_Revenue) AS Revenue_Bucket,
         NTILE(4) OVER (ORDER BY CA.Total_Net_Profit) AS Profit_Bucket,
         (CA.Total_Net_Profit / NULLIF(CA.Total_Revenue, 0)) AS [Net_Margin%],
